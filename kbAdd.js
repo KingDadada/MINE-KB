@@ -23,7 +23,7 @@ function operateKb() {
         alert("删除成功");
     } else {
         var title = $("#kbtitle").val();
-        var content = $("#kbtitle").val();
+        var content = $("#kbcontent").val();
         if (title.indexOf("#") != -1) {
             alert("不能包含#");
             return;
