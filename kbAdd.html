@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="white" />
+    <meta name="apple-mobile-web-app-title" content="知识库">
+    <script src="./jquery-2.1.1.min.js"></script>
+    <script src="./common.js"></script>
+    <script src="./kbAdd.js"></script>
+    <link rel="stylesheet" href="./common.css">
+    <style>
+        .kb-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .kb-content {
+            padding: 10px;
+        }
+
+        .header-title {
+            text-align: left;
+            color: var(--primary-color);
+            padding-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .kb-item {
+            width: calc(100% - 10px);
+            height: 50px;
+            line-height: 50px;
+            box-shadow: var(--box-shadow);
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-title" onclick="showKb()">返回</div>
+    </div>
+    <div class="main">
+        <input id="kbid"type="hidden">
+        <h1>标题</h1>
+        <input id="kbtitle" class="sys-input" type="text">
+        <h1>内容</h1>
+        <textarea id="kbcontent" class="sys-textarea"></textarea>
+    </div>
+    <div class="footer" onclick="operateKb()">
+        <span id="footerBtn">保存</span>
+    </div>
+</body>
+
+</html>

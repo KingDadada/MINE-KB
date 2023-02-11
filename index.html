@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="white" />
+    <meta name="apple-mobile-web-app-title" content="知识库">
+
+    <script src="./jquery-2.1.1.min.js"></script>
+    <script src="./common.js"></script>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./common.css">
+    <style>
+        .kb-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .kb-content {
+            padding: 10px;
+        }
+
+        .header-title {
+            text-align: right;
+            color: var(--primary-color);
+            padding-right: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+
+        .footer {
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-title" onclick="showKb()">知识库</div>
+    </div>
+    <div class="main">
+        <div id="kb-title" class="kb-title"></div>
+        <div id="kb-content" class="kb-content">
+            
+        </div>
+    </div>
+    <div class="footer" onclick="gotoNextKb()">
+        下一个
+    </div>
+</body>
+
+</html>
