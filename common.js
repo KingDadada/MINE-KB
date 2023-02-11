@@ -11,6 +11,7 @@ function getData(dataType) {
         let key = localStorage.key(i);
         if (key.indexOf(dataType + "#") !== -1) {
             let data = localStorage.getItem(key);
+            data = JSON.parse(data);
             typeListData.push({ key: key, value: data });
         }
     }

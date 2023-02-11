@@ -8,8 +8,9 @@ $(function() {
 })
 
 function gotoNextKb() {
-    var data = getData("kb");
+    var data = getData("kbi");
+    if(data.length == 0) return;
     var nextIndex = parseInt(Math.random() * data.length);
-    $("#kb-title").html(data[nextIndex].key.split("#")[1]);
-    $("#kb-content").html(data[nextIndex].value);
+    $("#kb-title").html(data[nextIndex].value.title);
+    $("#kb-content").html(data[nextIndex].value.content);
 }

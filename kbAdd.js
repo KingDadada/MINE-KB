@@ -2,10 +2,11 @@ $(function () {
     setDark();
     var key = GetUrlParam("key");
     if (key && key != "") {
-        var content = localStorage.getItem(key);
+        var value = localStorage.getItem(key);
+        value = JSON.parse(value);
         $("#kbid").val(key);
-        $("#kbtitle").val(key.split("#")[1]);
-        $("#kbcontent").val(content);
+        $("#kbtitle").val(value.title);
+        $("#kbcontent").val(value.content);
         $("#footerBtn").text("删除");
         $("#footerBtn").css("color", "red");
     }
@@ -28,7 +29,7 @@ function operateKb() {
             return;
         }
         var now = new Date();
-        localStorage.setItem("kb#" + title + "#" + now.getTime(), content);
+        localStorage.setItem("kbi#" + now.getTime(), JSON.stringify({ content: content, title: title }));
         alert("添加成功");
     }
     showKb();

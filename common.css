@@ -88,6 +88,7 @@ body {
 
 .sys-textarea {
     margin: 5px;
+    padding: 10px;
     height: 50vh;
     width: calc(100% - 10px);
     border: 1px solid var(--main-bg-color-1);
